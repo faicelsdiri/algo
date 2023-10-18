@@ -1,0 +1,23 @@
+ALGORITHM checkpoint algo
+VAR
+ch:STRING;
+nbr_char:INTEGER:=0;
+nbr_word:INTEGER:=0;
+nbr_vowl:INTEGER:=0;
+
+BEGIN
+write ("write a sentence ");
+read(ch);
+nbr_char:=ch.length;
+FOR i FROM 1 TO nbr_char   DO
+REPEAT
+vowel:STRING=[AaEeUuIiOoYy];
+IF  (ch[i]=" " ) THEN
+nbr_word++;
+ELSE_IF (ch[i] IN vowel[]   ) THEN
+nbr_vowl++;
+END_IF
+UNTIL (ch[i]=".")
+END_FOR
+write("In That sentence we have ", nbr_word , " word" ," and   " ,nbr_vowl   ," vowel " ," and " ,nbr_char,"  caractere  " );
+END
